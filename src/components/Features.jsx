@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import PropTypes from "prop-types";
 import { TiLocationArrow } from "react-icons/ti";
 
 export const BentoTilt = ({ children, className = "" }) => {
@@ -37,8 +38,18 @@ export const BentoTilt = ({ children, className = "" }) => {
     </div>
   );
 };
+BentoTilt.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
 
 export const BentoCard = ({ src, title, description, isComingSoon }) => {
+  BentoCard.propTypes = {
+    src: PropTypes.string.isRequired,
+    title: PropTypes.node.isRequired,
+    description: PropTypes.string,
+    isComingSoon: PropTypes.bool,
+  };
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoverOpacity, setHoverOpacity] = useState(0);
   const hoverButtonRef = useRef(null);

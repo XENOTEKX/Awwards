@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRef } from 'react'
 import Button from './Button';
 import { TiLocationArrow } from 'react-icons/ti';
